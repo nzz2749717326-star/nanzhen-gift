@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>来自南镇镇的礼物</title>
+<style>
+  body {
+    background: linear-gradient(to bottom right, #7eb9ff, #b3e5ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Microsoft YaHei", sans-serif;
+  }
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  }
+  .message {
+    opacity: 0;
+    font-size: 18px;
+    color: #004b8d;
+    margin: 15px 0;
+    transition: opacity 1s;
+  }
+  .show {
+    opacity: 1;
+  }
+  h1 {
+    font-size: 22px;
+    color: #003f7f;
+    margin-bottom: 25px;
+  }
+  .footer {
+    opacity: 0;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #004b8d;
+    transition: opacity 2s;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>来自南镇镇的礼物 🎁</h1>
+    <div class="message">💖 提示：今天也要开心噢～</div>
+    <div class="message">💖 提示：别忘了喝水，照顾好自己</div>
+    <div class="message">💖 提示：你已经很棒了，别太苛求自己</div>
+    <div class="message">💖 提示：我想你了</div>
+    <div class="message">💖 提示：学会爱自己，才能更好地爱别人</div>
+    <div class="message">💖 提示：每天都要元气满满 ☀️</div>
+    <div class="message">💖 提示：期待下一次见面 💫</div>
+    <div class="message">💖 提示：夜深啦，早点休息 🌙</div>
+    <div class="footer">—— 来自你的神秘礼物 💌</div>
+  </div>
+
+  <script>
+    const messages = document.querySelectorAll('.message');
+    const footer = document.querySelector('.footer');
+    messages.forEach((msg, index) => {
+      setTimeout(() => msg.classList.add('show'), index * 1200);
+    });
+    setTimeout(() => footer.style.opacity = '1', messages.length * 1200 + 800);
+  </script>
+</body>
+</html>
